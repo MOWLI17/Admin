@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 import { cn } from '../utils/cn';
 
+import logo from '../asset/logo.jpg';
+
 const Sidebar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -56,10 +58,9 @@ const Sidebar = () => {
         <div className="flex h-full flex-col p-6">
           {/* Logo */}
           <div className="mb-10 flex items-center gap-3 py-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#fbbf24] shadow-lg shadow-yellow-500/20">
-              <HardHat className="h-6 w-6 text-[#001b3a]" />
+            <div className="flex h-12 w-full items-center justify-start overflow-hidden">
+              <img src={logo} alt="ConnectNBuild Logo" className="h-full object-contain" />
             </div>
-            <span className="text-xl font-black tracking-tight text-white uppercase italic">ConnectNBuild</span>
           </div>
 
           {/* Navigation */}

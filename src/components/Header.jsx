@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Search, Bell, User, Hammer, LogOut } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import logo from '../asset/logo.jpg';
 
 const Header = () => {
   const { logout, timeLeft } = useAuth();
@@ -24,7 +25,9 @@ const Header = () => {
         </div>
 
         {/* Brand placeholder for Mobile */}
-        <div className="md:hidden"></div>
+        <div className="flex items-center md:hidden">
+          <img src={logo} alt="ConnectNBuild Logo" className="h-8 object-contain" />
+        </div>
 
         {/* Session Timer */}
         <div className="hidden xl:flex items-center gap-3 rounded-xl bg-slate-900 px-4 py-2 ml-4">

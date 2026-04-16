@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { HardHat, Mail, Lock, ArrowRight } from 'lucide-react';
+import { Mail, Lock, ArrowRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import logo from '../asset/logo.jpg';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -20,10 +21,9 @@ const LoginPage = () => {
     <div className="flex min-h-screen items-center justify-center bg-[#001b3a] p-6 font-sans">
       <div className="w-full max-w-md space-y-8 rounded-[40px] bg-white p-10 shadow-2xl shadow-black/40">
         <div className="flex flex-col items-center text-center">
-          <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#fbbf24] shadow-xl shadow-yellow-500/20">
-            <HardHat className="h-10 w-10 text-[#001b3a]" />
+          <div className="mb-6 flex h-20 w-full items-center justify-center overflow-hidden">
+            <img src={logo} alt="ConnectNBuild Logo" className="h-full object-contain" />
           </div>
-          <h1 className="text-3xl font-black tracking-tight text-[#001b3a] uppercase italic">ConnectNBuild</h1>
           <p className="mt-2 text-sm font-bold text-slate-500">Infrastructure Management Suite</p>
         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plus, ChevronLeft, ChevronRight, Today, Calendar, List, Clock } from 'lucide-react';
+import { Plus, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const CalendarPage = () => {
   const timeSlots = Array.from({ length: 11 }, (_, i) => `${i + 12 === 12 ? 12 : i}:00 AM`);
